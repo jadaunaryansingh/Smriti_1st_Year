@@ -46,25 +46,27 @@ export function PlatformLayout({
           </h1>
           <p className="text-xl text-slate-300 mb-12 leading-relaxed">{description}</p>
 
-          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border-2 border-dashed border-slate-700 p-12 text-center">
-            <div className="inline-block mb-4">
-              <div className="w-16 h-16 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-full flex items-center justify-center animate-pulse">
-                <Sparkles className="w-8 h-8 text-primary" />
+          {!children && (
+            <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl border-2 border-dashed border-slate-700 p-12 text-center">
+              <div className="inline-block mb-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-full flex items-center justify-center animate-pulse">
+                  <Sparkles className="w-8 h-8 text-primary" />
+                </div>
               </div>
+              <h2 className="text-2xl font-bold text-white mb-2">
+                Coming Soon
+              </h2>
+              <p className="text-slate-400 mb-8">
+                This page is being built. Keep prompting to add content and features
+                to this section!
+              </p>
+              <Link to="/">
+                <Button variant="outline" className="border-2 border-primary/50 text-slate-200 hover:bg-primary/10">
+                  Back to Home
+                </Button>
+              </Link>
             </div>
-            <h2 className="text-2xl font-bold text-white mb-2">
-              Coming Soon
-            </h2>
-            <p className="text-slate-400 mb-8">
-              This page is being built. Keep prompting to add content and features
-              to this section!
-            </p>
-            <Link to="/">
-              <Button variant="outline" className="border-2 border-primary/50 text-slate-200 hover:bg-primary/10">
-                Back to Home
-              </Button>
-            </Link>
-          </div>
+          )}
         </div>
 
         {children}

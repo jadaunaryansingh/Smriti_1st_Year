@@ -144,18 +144,18 @@ export default function Index() {
           </div>
         </div>
 
-        {/* Promo Video Area */}
-        <div className="mt-20 relative hidden md:block">
+        {/* Promo Video Area - Placeholder */}
+        {/* <div className="mt-20 relative hidden md:block">
           <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-transparent rounded-3xl blur-2xl" />
           <div className="relative max-w-5xl mx-auto rounded-3xl overflow-hidden border border-slate-700 bg-slate-900/70 shadow-2xl shadow-primary/20">
             <video
               className="w-full h-full object-cover"
-              src="/Mega Platform_ The Future of Learning.mp4"
+              src="/demo-video.mp4"
               controls
               playsInline
             />
           </div>
-        </div>
+        </div> */
       </section>
 
       {/* Stats Section */}
