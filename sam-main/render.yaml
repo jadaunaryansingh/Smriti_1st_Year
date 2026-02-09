@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: mega-platform
+    runtime: node
+    region: oregon
+    plan: free
+    buildCommand: pnpm install && pnpm run build
+    startCommand: pnpm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20.11.1
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: PING_MESSAGE
+        value: "ping pong"
+    healthCheckPath: /api/ping
