@@ -142,34 +142,21 @@ export default function Index() {
               Watch Demo
             </Button>
           </div>
-          </div>
         </div>
 
         {/* Promo Video Area */}
         <div className="mt-20 relative">
           <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-transparent rounded-3xl blur-2xl" />
           <div className="relative max-w-5xl mx-auto rounded-3xl overflow-hidden border border-slate-700 bg-slate-900/70 shadow-2xl shadow-primary/20">
-            <div className="aspect-video bg-slate-900/90 flex items-center justify-center">
-              {/* YouTube Embed - Replace VIDEO_ID with your YouTube video ID */}
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                title="Mega Platform Demo"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-              {/* Or use local video: */}
-              {/* <video
-                className="w-full h-full object-cover"
-                src="/demo-video.mp4"
-                controls
-                playsInline
-                poster="/video-thumbnail.jpg"
-              >
-                Your browser does not support the video tag.
-              </video> */}
-            </div>
+            <video
+              className="w-full h-full object-cover"
+              src="/Mega Platform_ The Future of Learning.mp4"
+              controls
+              playsInline
+              poster=""
+            >
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </section>
