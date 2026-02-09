@@ -1,9 +1,11 @@
 import { Handler } from "@netlify/functions";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const genAI = new GoogleGenerativeAI(
-  process.env.GEMINI_API_KEY || "AIzaSyAHTQvsdNz6UQd4yPeZ90Wv756wZdI5z_o"
-);
+if (!process.env.GEMINI_API_KEY) {
+  throw new Error("GEMINI_API_KEY is not set");
+}
+
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 async function generateJSON(prompt: string) {
   const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });

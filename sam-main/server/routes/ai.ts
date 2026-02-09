@@ -2,11 +2,7 @@ import type { RequestHandler } from "express";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 async function generateJSON<T>(prompt: string): Promise<T> {
-  // Prefer environment variable, but fall back to inline key so the
-  // app works even if .env loading is misconfigured in this setup.
-  const apiKey =
-    process.env.GEMINI_API_KEY ??
-    "AIzaSyAHTQvsdNz6UQd4yPeZ90Wv756wZdI5z_o";
+  const apiKey = process.env.GEMINI_API_KEY;
 
   if (!apiKey) {
     throw new Error("GEMINI_API_KEY is not set");
